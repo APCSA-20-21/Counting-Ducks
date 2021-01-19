@@ -9,7 +9,9 @@ public class Main
       frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       //YOU MUST HAVE THIS LINE
       frame1.setSize(500,500);
-      
+      frame1.setVisible(true);
+
+
 
       //-----------------Button 1-------------------
       JButton  button1 = new JButton("Click me!");
@@ -22,8 +24,20 @@ public class Main
           }//end the block of what the button will do
       }); //end the ActionListener
 
-      frame1.add(button1);
+      //----------------Button 2 -------------------
+      JButton button2 = new JButton ("No, click me");
+      button2.addActionListener(new ActionListener()
+      {
+        public void actionPerformed(ActionEvent e)
+        {
+            System.out.println("Thanks, pal!");
+        }
+      });
 
-      frame1.setVisible(true);
+      
+      frame1.add(button1);
+      frame1.add(button2);
+
+      
   }//end main method
 }//end class Main
